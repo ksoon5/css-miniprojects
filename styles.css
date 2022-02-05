@@ -149,6 +149,10 @@ Cards page
   width: 80vw;
   max-width: 1170px;
   margin: 2rem auto;
+  /* First option */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
+  grid-column-gap: 2rem;
 }
 .card {
   border: 1px solid var(--darkGrey);
@@ -164,4 +168,25 @@ Cards page
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   color: var(--primaryColor);
+}
+
+/* Second option */
+
+/* @media screen and (min-width: 768px) {
+  .cards-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cards-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
